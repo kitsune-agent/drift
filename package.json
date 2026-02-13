@@ -1,0 +1,50 @@
+{
+  "name": "drift-cli",
+  "version": "1.0.0",
+  "description": "What did my AI agents do while I was away? Agent activity timeline for your terminal.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "drift": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "git",
+    "cli",
+    "timeline",
+    "developer-tools",
+    "claude",
+    "copilot",
+    "cursor"
+  ],
+  "author": "kitsune-agent",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "better-sqlite3": "^12.6.2",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "dayjs": "^1.11.19",
+    "ink": "^6.7.0",
+    "ink-spinner": "^5.0.0",
+    "react": "^19.2.4",
+    "simple-git": "^3.30.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/ink": "^0.5.2",
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "typescript": "^5.9.3"
+  }
+}
