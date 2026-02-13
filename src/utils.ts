@@ -24,8 +24,8 @@ export function parseTimeWindow(window: string): Date {
     return now.subtract(parseInt(amount!, 10), unitMap[unit!]!).toDate();
   }
 
-  // Handle "X hours ago", "X days ago" etc
-  const agoMatch = window.match(/^(\d+)\s+(hour|day|minute|week|month)s?\s+ago$/);
+  // Handle "X hours ago", "X days ago", or just "X days", "X hours"
+  const agoMatch = window.match(/^(\d+)\s+(hour|day|minute|week|month)s?(\s+ago)?$/);
   if (agoMatch) {
     const [, amount, unit] = agoMatch;
     return now.subtract(parseInt(amount!, 10), unit as dayjs.ManipulateType).toDate();
